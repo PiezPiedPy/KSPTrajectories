@@ -15,14 +15,13 @@
     <TargetFrameworkProfile />
     <StartAction>Program</StartAction>
     <StartProgram>$(KSPDIR)\KSP_x64.exe</StartProgram>
-    <StartWorkingDirectory>$(KSPDIR)</StartWorkingDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>$(KSPDIR)\GameData\Trajectories\Plugin\</OutputPath>
-    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <OutputPath>..\..\..\..\..\KSP_Dev\GameData\Trajectories\Plugin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEVELOPMENT;DEBUG_PROFILER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <FileAlignment>512</FileAlignment>
@@ -31,7 +30,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>$(KSPDIR)\GameData\Trajectories\Plugin\</OutputPath>
+    <OutputPath>..\..\..\..\..\KSP_Dev\GameData\Trajectories\Plugin\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <ErrorReport>none</ErrorReport>
@@ -43,7 +42,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <ReferencePath>$(KSPDIR)</ReferencePath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
